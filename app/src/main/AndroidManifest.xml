@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hhh.canguanapp">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".admin.PieChartActivity"></activity>
+        <activity android:name=".staff.FindCaiGouActivity" />
+        <activity android:name=".staff.AltCaiGouActivity" />
+        <activity android:name=".staff.AddCaiGouActivity" />
+        <activity android:name=".staff.AltRoomActivity" />
+        <activity android:name=".staff.FindRoomActivity" />
+        <activity android:name=".staff.AddRoomActivity" />
+        <activity android:name=".customer.RechargeActivity" />
+        <activity android:name=".admin.FindCustomerActivity" />
+        <activity android:name=".admin.AltCustomerActivity" />
+        <activity android:name=".admin.AddCustomerActivity" />
+        <activity android:name=".staff.StaffMainActivity" />
+        <activity android:name=".customer.CustomerMainActivity" />
+        <activity android:name=".admin.AdminMainActivity" />
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".admin.AddStaffActivity" />
+        <activity android:name=".admin.AltStaffActivity" />
+        <activity android:name=".admin.FindStaffActivity" />
+        <activity android:name=".admin.AdminAddCanActivity" />
+        <activity android:name=".admin.AdminAltCanActivity" />
+        <activity android:name=".admin.AdminFindCanActivity" />
+        <activity android:name=".admin.AdminAddDeskActivity" />
+        <activity android:name=".admin.AdminFindDeskActivity" />
+        <activity android:name=".admin.AltDeskActivity" />
+        <activity android:name=".admin.MoneyActivity" />
+        <activity android:name=".admin.PayActivity" />
+        <activity android:name=".admin.NumberActivity" />
+        <activity android:name=".customer.AdminCommunicationActivity" />
+        <activity android:name=".customer.PublishCommunicationActivity" />
+    </application>
+
+</manifest>

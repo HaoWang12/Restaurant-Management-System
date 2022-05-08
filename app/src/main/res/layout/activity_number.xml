@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/layout_title"></include>
+
+    <EditText
+        android:hint="Starting Time（2022-02-02 18:00)"
+        android:id="@+id/et_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </EditText>
+    <EditText
+        android:hint="End Time（2022-02-02 18:00)"
+        android:id="@+id/et_end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </EditText>
+    <Button
+        android:textAllCaps="false"
+        android:id="@+id/bt_submit"
+        android:text="Submit"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </Button>
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:id="@+id/tv_total"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:text="Sales：0 dollars"
+        android:layout_below="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <ListView
+        android:layout_marginBottom="20dp"
+        android:layout_below="@+id/tv_total"
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>
