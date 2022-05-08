@@ -56,7 +56,7 @@
                 android:src="@drawable/comment" />
         </RelativeLayout>
 
-        <com.hhh.canguanapp.customer.ListViewForScrollView
+        <com.hhh.restaurantapp.customer.ListViewForScrollView
             android:focusable="false"
             android:layout_marginTop="10dp"
             android:clickable="false"

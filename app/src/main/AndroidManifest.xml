@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.hhh.canguanapp">
+    package="com.hhh.restaurantapp">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -14,9 +14,9 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity android:name=".admin.PieChartActivity"></activity>
-        <activity android:name=".staff.FindCaiGouActivity" />
-        <activity android:name=".staff.AltCaiGouActivity" />
-        <activity android:name=".staff.AddCaiGouActivity" />
+        <activity android:name=".staff.FindPurchaseActivity" />
+        <activity android:name=".staff.AltPurchaseActivity" />
+        <activity android:name=".staff.AddPurchaseActivity" />
         <activity android:name=".staff.AltRoomActivity" />
         <activity android:name=".staff.FindRoomActivity" />
         <activity android:name=".staff.AddRoomActivity" />
@@ -38,13 +38,12 @@
         <activity android:name=".admin.AddStaffActivity" />
         <activity android:name=".admin.AltStaffActivity" />
         <activity android:name=".admin.FindStaffActivity" />
-        <activity android:name=".admin.AdminAddCanActivity" />
-        <activity android:name=".admin.AdminAltCanActivity" />
-        <activity android:name=".admin.AdminFindCanActivity" />
+        <activity android:name=".admin.AdminAddDishActivity" />
+        <activity android:name=".admin.AdminAltDishActivity" />
+        <activity android:name=".admin.AdminFindDishActivity" />
         <activity android:name=".admin.AdminAddDeskActivity" />
         <activity android:name=".admin.AdminFindDeskActivity" />
         <activity android:name=".admin.AltDeskActivity" />
-        <activity android:name=".admin.MoneyActivity" />
         <activity android:name=".admin.PayActivity" />
         <activity android:name=".admin.NumberActivity" />
         <activity android:name=".customer.AdminCommunicationActivity" />
