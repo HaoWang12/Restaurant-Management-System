@@ -1,6 +1,7 @@
 package com.hhh.restaurantapp;
 
 import android.os.Bundle;
+import android.text.method.NumberKeyListener;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -24,11 +25,23 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         et_ID = (EditText) findViewById(R.id.et_ID);
+        et_ID.setKeyListener(new NumberKeyListener() {
+            @Override
+            protected char[] getAcceptedChars() {
+                return new char[] { '1', '2', '3', '4', '5', '6', '7', '8','9', '0' };
+            }
+            @Override
+            public int getInputType() {
+                // TODO Auto-generated method stub
+                return android.text.InputType.TYPE_CLASS_PHONE;
+            }
+        });
         et_name = (EditText) findViewById(R.id.et_name);
         et_password = (EditText) findViewById(R.id.et_password);
         et_again = (EditText) findViewById(R.id.et_again);
         bt_register = (Button) findViewById(R.id.bt_register);
         bt_register.setOnClickListener(this);
+
     }
 
     @Override

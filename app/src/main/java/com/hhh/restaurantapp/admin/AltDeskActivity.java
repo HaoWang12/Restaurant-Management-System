@@ -27,6 +27,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -202,6 +203,13 @@ public class AltDeskActivity extends AppCompatActivity implements View.OnClickLi
                 String note = list.get(position).get("note");
                 String number = list.get(position).get("number");
                 String newprice = list.get(position).get("newprice");
+                String imgName = "dish_"+name;
+                int id = getResources().getIdentifier(imgName,"drawable",getPackageName());
+                if (id >0){
+                    holder.iv_img.setImageResource(id);
+                }else{
+                    holder.iv_img.setImageResource(R.drawable.dish_staple1);
+                }
                 if (!name.equals("")) {
                     holder.tv_name.setText(list.get(position).get("name"));
                 }
@@ -236,7 +244,7 @@ public class AltDeskActivity extends AppCompatActivity implements View.OnClickLi
 
         class ViewHolder {
             TextView tv_name, tv_price, tv_note, tv_number,tv_newprice;
-            ImageView iv_jia, iv_jian;
+            ImageView iv_jia, iv_jian,iv_img;
 
             public ViewHolder(View view) {
                 tv_name = view.findViewById(R.id.tv_name);
@@ -245,6 +253,7 @@ public class AltDeskActivity extends AppCompatActivity implements View.OnClickLi
                 tv_number = view.findViewById(R.id.tv_number);
                 iv_jia = view.findViewById(R.id.iv_jia);
                 iv_jian = view.findViewById(R.id.iv_jian);
+                iv_img = view.findViewById(R.id.iv_img);
                 tv_newprice = view.findViewById(R.id.tv_newprice);
             }
         }
@@ -464,5 +473,17 @@ public class AltDeskActivity extends AppCompatActivity implements View.OnClickLi
             }
         }
         return s;
+    }
+    public static int getImage(String pic) {
+        if(pic==null||pic.trim().equals("")){
+            return R.drawable.dish_c1;
+        }
+        Class draw = R.drawable.class;
+        try {
+            Field field = draw.getDeclaredField(pic);
+            return field.getInt(pic);
+        } catch (Exception e) {
+            return R.drawable.dish_c1;
+        }
     }
 }

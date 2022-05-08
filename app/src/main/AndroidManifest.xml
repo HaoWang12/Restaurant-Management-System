@@ -27,7 +27,7 @@
         <activity android:name=".staff.StaffMainActivity" />
         <activity android:name=".customer.CustomerMainActivity" />
         <activity android:name=".admin.AdminMainActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".LoginActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
